@@ -18,27 +18,44 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="footer-main footer pb-5">
     <div class="<?php echo esc_attr( $container ); ?>">
         <div class="row">
-            <?php /*** Left Column ***/ ?>
-            <div class="col-12 col-md-5 col-lg-6 col-start">
+            <?php /*** Form Column ***/ ?>
+            <div class="col-12 col-md-6 col-lg-7 col-end order-md-1 d-flex flex-column align-items-center justify-content-start "> 
+                <div class="d-md-none text-center">
+                    <?php get_template_part( 'template-parts/footer/partials/logo' ); ?>
+                </div>
+                <?php /*** Form ***/ ?>
+                 
+                <?php get_template_part( 'template-parts/footer/partials/form' ); ?>
+            </div>
+            <?php /*** Form Column ***/ ?>
 
+
+            <?php /*** Info Column ***/ ?>
+            <div class="col-12 col-md-6 col-lg-5 col-start order-md-0">
+                <div class="d-none d-md-block">
+                    <?php get_template_part( 'template-parts/footer/partials/logo' ); ?>
+                </div>
                 <?php /*** Location + Logo ***/ ?>
                 <div class="f-loc text-center text-md-start">
                     <?php get_template_part( 'template-parts/footer/partials/loc' ); ?>
                 </div>               
             </div>
-            <?php /*** Right Column ***/ ?>
-            <div class="col-12 col-md-7 col-lg-6 col-end d-flex flex-column align-items-end justify-content-end">	
+           
+        </div>
 
-                <?php /*** Social ***/ ?>
+        <?php /*** copyright bar Column ***/ ?>
+        <div class="row py-5">
+            <?php /*** Social ***/ ?>
+            <div class="col-12 col-md-6 order-md-1">
                 <div class="social-wrap justify-content-center justify-content-md-end mb-2">
                     <?php get_template_part('template-parts/components/social'); ?>
                 </div>
-                <?php /*** Copyright info ***/ ?>
-                <div class="site-info d-flex flex-column flex-lg-row justify-content-end align-items-center align-items-md-end align-items-lg-center">
-                    <?php get_template_part( 'template-parts/footer/partials/copy' ); ?>
-                </div>
             </div>
-            <?php /*** Right Column ***/ ?>
+
+            <?php /*** Copyright info ***/ ?>
+            <div class="col-12 col-md-6 order-md-0">
+                <?php get_template_part( 'template-parts/footer/partials/copy' ); ?>
+            </div>
         </div>
     </div>
 </div>

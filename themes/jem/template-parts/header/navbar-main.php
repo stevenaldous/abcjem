@@ -27,9 +27,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <?php get_template_part('template-parts/header/partials/logo');  // Site Logo ?>
 
-		<div class="nav-inner d-flex flex-grow-1 align-self-center align-items-center justify-content-end align-self-start py-2 pt-lg-0">
-
-            <?php get_template_part('template-parts/header/partials/phone'); // phone button ?>
+		<div class="nav-inner d-flex flex-md-column flex-grow-1 align-self-end align-items-end justify-content-end align-self-start py-2 pt-lg-0">
+			<div class="top-bar">
+				<?php get_template_part('template-parts/header/partials/phone'); // phone button ?>
+			</div>
 
 			<button class="navbar-toggler ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNavOffcanvas" aria-controls="navbarNavOffcanvas" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 				<i class="fa-regular fa-bars"></i>

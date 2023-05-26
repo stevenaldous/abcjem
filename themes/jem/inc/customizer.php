@@ -337,6 +337,46 @@ function mb_customize_register( $wp_customize ) {
 
 
 
+	// footer logo 
+	$wp_customize->add_setting( 'footer_logo', array(
+        'default' => get_theme_file_uri('assets/image/logo.jpg'), // Add Default Image URL 
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+ 
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'footer_logo_control', array(
+        'label' => 'Footer Logo',
+        'priority' => 21,
+        'section' => 'title_tagline',
+        'settings' => 'footer_logo',
+        'button_labels' => array(// All These labels are optional
+                    'select' => 'Select Logo',
+                    'remove' => 'Remove Logo',
+                    'change' => 'Change Logo',
+                    )
+    )));
+
+
+	// footer mobile logo
+	$wp_customize->add_setting( 'footer_mobile_logo', array(
+        'default' => get_theme_file_uri('assets/image/logo.jpg'), // Add Default Image URL 
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+ 
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'footer_mobile_logo_control', array(
+        'label' => 'Footer Mobile Logo',
+        'priority' => 22,
+        'section' => 'title_tagline',
+        'settings' => 'footer_mobile_logo',
+        'button_labels' => array(// All These labels are optional
+                    'select' => 'Select Logo',
+                    'remove' => 'Remove Logo',
+                    'change' => 'Change Logo',
+                    )
+    )));
+
+
+
+
 
 };
 

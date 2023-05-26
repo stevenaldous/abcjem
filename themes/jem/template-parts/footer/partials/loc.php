@@ -17,19 +17,7 @@ $ctry 	= get_field('pho_ctry','options');
 $pho 	= get_field('pho','options');
 $ema 	= get_field('email','options' );
 
-// get customizer foot logo
-$flogo  = get_theme_mod('footer_logo');
-
 ?>
-<div class="foot-logo-wrap">
-    <a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url">
-        <?php if( $flogo ): ?>
-            <img class="foot-logo" src="<?php echo esc_url( $flogo ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
-        <?php else: ?>
-            <?php bloginfo( 'name' ); ?>
-        <?php endif; ?>
-    </a>
-</div>
 <div class="add-wrap mt-3">
     <?php echo main_address('block' ); ?>
 </div>
