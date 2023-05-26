@@ -1,0 +1,85 @@
+{
+    "key": "group_62d098d32fe3a",
+    "title": "CPT: Award",
+    "fields": [
+        {
+            "key": "field_62d0996e70583",
+            "label": "Award Logo",
+            "name": "logo",
+            "type": "image",
+            "instructions": "There is a maximum file size of 0.5MB allowed. For the end user the smaller the better load times! If you need to compress your image, simply upload to <a href=\"https:\/\/tinypng.com\/\" target=\"_blank\">TinyPng<\/a> and only use a JPEG unless there is transparency.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "0.5",
+            "mime_types": ""
+        },
+        {
+            "key": "field_62d09a1470584",
+            "label": "Description",
+            "name": "desc",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 500,
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_62f3d5785dc1d",
+            "label": "Link",
+            "name": "link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "awards"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1660176667
+}

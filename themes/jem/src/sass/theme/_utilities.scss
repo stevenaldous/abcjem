@@ -1,0 +1,172 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Utilities / Helper Classes
+///////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Text ///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $d_md){
+	.two-col {
+		columns: 2;
+	}
+}
+.text-justify {
+    text-align: justify;
+}
+/* Text Colors */
+.c-white { color: $white; }
+.c-light { color: $light; }
+.c-jem1 { color: $jem1; }
+.c-dark { color: $dark; }
+.c-black { color: $black; }
+
+///////////////////////////////////////////////////////////////////////////////////
+// Backgrounds ////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+.bg-white { background: $white; }
+.bg-light { background: $light; }
+.bg-ltgray { background: $ltgray; }
+.bg-jem1 { background: $jem1; }
+.bg-dark { background-color: $dark !important; }
+.bg-black { background: $black; }
+
+.bg-trans { background: transparent; }
+.bg-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Images /////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+// object fit
+.obj.img-wrap {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	&.compat-object-fit {
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		img {
+			display: none;
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Embed //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+iframe {
+    max-width: 100%;
+    // height: auto;
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Aspect Ratio Boxes /////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+/* this is pulled from https://getbootstrap.com/docs/5.2/helpers/ratio/
+*
+* <div class="ratio ratio-1x1">
+*   <div class="ratio-inner">
+*       <!-- content -->
+*   </div>
+* </div>
+*/
+
+
+/* .ratio-1x1 Bootstrap default */
+
+// landscape
+.ratio-2x1 { --bs-aspect-ratio: calc( (1/2) * 100% ); }
+.ratio-3x2 { --bs-aspect-ratio: calc( (2/3) * 100% ); }
+/* .ratio-4x3 Bootstrap default */
+.ratio-5x4 { --bs-aspect-ratio: calc( (4/5) * 100% ); }
+/* .ratio-16x9 Bootstrap default */
+/* .ratio-21x9 Bootstrap default */
+
+
+//portrait
+.ratio-1x2 { --bs-aspect-ratio: calc( (2/1) * 100% ); }
+.ratio-3x4 { --bs-aspect-ratio: calc( (4/3) * 100% ); }
+.ratio-4x5 { --bs-aspect-ratio: calc( (5/4) * 100% ); }
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Maximum Width //////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+@for $i from 1 through 10 {
+	.mw-#{$i}0 { max-width: percentage($i / 10); }
+}
+// tablet
+@media #{ $mq_md } {
+	@for $i from 1 through 10 {
+		.mw-md-#{$i}0 { max-width: percentage($i / 10); }
+	}
+}
+// laptop
+@media #{ $mq_lg } {
+	@for $i from 1 through 10 {	
+		.mw-lg-#{$i}0 { max-width: percentage($i / 10); }
+	}
+}
+// desktop
+@media #{ $mq_xl } {
+	@for $i from 1 through 10 {
+		.mw-xl-#{$i}0 { max-width: percentage($i / 10); }
+	}
+}
+// desktop 24"+
+@media #{ $mq_xxl } {
+	@for $i from 1 through 10 {
+		.mw-xxl-#{$i}0 { max-width: percentage($i / 10); }
+	}
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// MISC CLASSES ///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+.abs-cover {
+	@include cover();
+}
+
+.rounded { overflow: hidden;}
+
+// class to add design elements to divs or text
+.flair {
+	position: relative;
+    padding-left: 1rem;
+	&::before {
+		content: "";
+		position: absolute;
+		border-left: solid 2px;
+		height: 100%;
+		left: 0;
+		top: 0;
+		border-color: inherit;
+	}
+ }
+
+// support a larger font size for text content
+.font-lg p, a, ul { font-size: 1.2rem; } 
+
+
+
+

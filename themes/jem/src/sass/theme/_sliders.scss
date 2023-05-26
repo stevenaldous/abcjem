@@ -1,0 +1,119 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Sliders
+///////////////////////////////////////////////////////////////////////////////////
+
+// generic slick dot styles
+.slick-dots {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    li {
+        position: relative;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+        button {
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            width: 15px;
+            height: 15px;
+            padding: 5px;
+            cursor: pointer;
+            color: transparent;
+            border: 0;
+            outline: none;
+            background: transparent;
+            &:before {
+                font-size: 2rem;
+                line-height: 15px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 15px;
+                height: 15px;
+                content: '•';
+                text-align: center;
+                opacity: .25;
+                color: $black;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+        &.slick-active button:before {
+            opacity: .75;
+            color: black;
+        }
+    }
+}
+
+
+// generic slick arrow styles
+.slick-arrow {
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    font-size: 2rem;;
+}
+// styles for dots and arrows if in slider
+.slick-slider {
+    &.slick-dotted {
+        margin-bottom: 25px;
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: -25px;
+        text-align: center;
+        width: 100%;
+    }
+    .slick-arrow {
+        position: absolute;
+        height: 100%;
+        top: 0;
+    }
+    .slick-prev {
+        left: -25px;
+    }
+    .slick-next {
+        right: -25px;
+    }
+}
+// styles for dots and arrows if in slick control
+
+.slider-wrap {
+    display: flex;
+    flex-direction: column;
+    .slick-slider { order: 0}
+    .slick-controls { order: 1;}
+}
+
+.slick-controls {
+    & ~ .slick-dotted {
+        margin-bottom: 0;
+    }
+    display: flex;
+    justify-content: space-between;
+    .slick-dots {
+        position: relative;
+        order: 1;
+    }
+    .slick-arrow {
+        font-size: 1.5rem;
+    }
+    .slick-prev {
+        order: 0;
+    }
+    .slick-next {
+        order: 2;
+    }
+
+}
+
+// vertically center slider content
+.v-center .slick-track {
+    display: flex;
+    align-items: center;
+}

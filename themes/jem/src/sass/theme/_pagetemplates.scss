@@ -1,0 +1,39 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Page Templates
+///////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Contact Templates
+///////////////////////////////////////////////////////////////////////////////////
+body.page-template-contact {
+    .add-wrap {
+        p { font-size: 1.125rem; }
+    }
+    .pho-wrap {
+        p, a        { font-size: 1.125rem; }
+        a:hover, a:focus { color: $black; }
+        .item {
+            a { text-decoration: none; }
+            i {  margin-right: 0.4rem; }
+        }
+    }
+    .social {
+        a { 
+            color: $jem1; 
+            &:hover, &:focus { color: $black; }
+        }
+        i { 
+            font-size: 1.5rem;
+            margin-right: 0.5rem;;
+        }
+    }
+        // tablet +
+        @media( min-width: $d_lg ) {
+            .social i { font-size: 2rem; }
+        }   
+        // desktop +
+        @media( min-width: $d_lg ) {
+            .social i { font-size: 3rem; }
+        }
+}

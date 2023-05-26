@@ -1,0 +1,86 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
+// Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
+// As example you find one of the most important Bootstrap variable below: $brand-primary.
+// Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
+// Just add your color code here, compile the theme.scss file to change this color everywhere
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// DISPLAY SIZES //////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+$d_xs: 0;
+$d_sm: 576px;
+$d_md: 768px;
+$d_lg: 992px;
+$d_xl: 1200px;
+$d_xxl: 1500px;
+
+///////////////////////////////////////////////////////////////////////////////////
+// Media Queries //////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+$mq-sm: "(min-width: #{$d_sm})";
+$mq-md: "(min-width: #{$d_md})";
+$mq-lg: "(min-width: #{$d_lg})";
+$mq-xl: "(min-width: #{$d_xl})";
+$mq-xxl: "(min-width: #{$d_xxl})";
+
+
+///////////////////////////////////////////////
+// Fonts //////////////////////////////////////
+///////////////////////////////////////////////
+$f1: 'Roboto', sans-serif;
+$f2: 'Roboto', sans-serif;
+
+@mixin f1_light() {
+	font-family: $f1;
+	font-weight: 400;
+}
+@mixin f1_reg() {
+	font-family: $f1;
+	font-weight: 400;
+}
+@mixin f1_med() {
+	font-family: $f1;
+	font-weight: 500;
+}
+@mixin f1_bold() {
+	font-family: $f1;
+	font-weight: 700;
+}
+@mixin f2_light() {
+	font-family: $f2;
+	font-weight: 300;
+}
+@mixin f2_reg() {
+	font-family: $f2;
+	font-weight: 400;
+}
+@mixin f2_bold() {
+	font-family: $f2;
+	font-weight: 700;
+}
+
+
+
+///////////////////////////////////////////////
+// Colors //////////////////////////////////////
+///////////////////////////////////////////////
+$white: #fff;
+$light: #e2e2e2;
+$ltgray: #C6C6C6;
+$ltgrey: $ltgray;  /* just in case I forgot how I spell Graey */
+$gray: #707070;
+$grey : $gray;     /* just in case I forgot how I spell Graey */
+$dark: #373737;
+$black: #010203;
+
+// main accent vars
+$jem1: #F16A2B;
+$jem1d: darken( $jem1, 20%);
+$jem2: $jem1;
+
+// set Bootstrap primary color
+$primary: $jem1;
+
+

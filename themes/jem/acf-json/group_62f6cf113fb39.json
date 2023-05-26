@@ -1,0 +1,44 @@
+{
+    "key": "group_62f6cf113fb39",
+    "title": "Page: JavaScript",
+    "fields": [
+        {
+            "key": "field_62f6cf1141831",
+            "label": "Footer Script",
+            "name": "pagejs",
+            "type": "textarea",
+            "instructions": "This will place any code written on this section on the page exactly as written. Be careful as this is one area where improper code will be displayed potentially breaking the page. All code must be wrapped and self closing. \r\n<br><br>\r\n&lt;script type=\"text\/javascript\"&gt;\r\n<br>\r\n   \/\/ some JavaScript\r\n<br>\r\n&lt;\/script&gt;",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1660342106
+}

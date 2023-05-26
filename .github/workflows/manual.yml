@@ -1,0 +1,19 @@
+name: Manual Deploy to WP Engine
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: GitHub Action Deploy to WP Engine
+      uses: wpengine/github-action-wpe-site-deploy@v3
+      with:
+        WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
+        WPE_ENV: abcjemstg
+        # Deploy Options
+        SRC_PATH: "themes/jem/"
+        REMOTE_PATH: "wp-content/themes/jem/"
+        PHP_LINT: TRUE
+        # FLAGS: -azvr --inplace --delete --exclude=".*" --exclude-from=filetoexclude.php
+        CACHE_CLEAR: TRUE

@@ -1,0 +1,203 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Site Style-guide
+// This should be completed for every build.
+///////////////////////////////////////////////////////////////////////////////////
+html { overflow-y: scroll;}
+html ,body {
+	overflow-x: hidden;
+}
+
+
+body {
+	position: relative;
+	@include f1_light();
+	font-size: 16px;
+	max-width: 100%;
+}
+//   *:visited, *:focus-visible {
+//   	outline: none;
+//   }
+
+
+// footer to bottom of viewport
+#page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.page-wrapper {
+flex: 1;
+}
+#wrapper-footer {
+flex-shrink: 0;
+}
+
+
+/* Remove outline for non-keyboard :focus */
+*:focus:not(.focus-visible) {outline: none !important; box-shadow: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;}
+
+
+
+
+/* Remove outline for non-keyboard :focus */
+*:focus:not(.focus-visible) {outline: none !important; box-shadow: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Basic Text Styles //////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+.text-wrap p:last-of-type ,
+.txt-wrap p:last-of-type { margin-bottom: 0; }
+///////////////////////////////////////////////////////////////////////////////////
+// Heading Styles /////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+
+}
+
+h1, .h1 {
+
+	@media(min-width: $d_md ) {
+
+	}
+	@media(min-width: $d_lg ) {
+
+	}
+}
+h2, .h2 {
+
+	@media(min-width: $d_md ) {
+
+	}
+	@media(min-width: $d_lg ) {
+
+	}
+}
+h3, .h3 {
+
+	@media(min-width: $d_md ) {
+
+	}
+	@media(min-width: $d_lg ) {
+
+	}
+}
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+
+	@media(min-width: $d_md ) {
+
+	}
+	@media(min-width: $d_lg ) {
+
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Lists //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+ul { 
+	display: inline-block;
+	text-align: left;
+}
+ul.inline {
+	list-style: none;
+	padding: 0;
+	li {
+		display: inline;
+	}
+}
+ul.clean{
+	list-style: none;
+	padding: 0;
+}
+ul.bold {
+	li {
+		font-weight: 600;
+	}
+}
+li p:last-of-type { margin-bottom: 0; }
+
+///////////////////////////////////////////////////////////////////////////////////
+// Links //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+a {
+    color: $jem1;
+	@include transition(all 250ms);
+	&:hover, &:focus {
+
+	}
+}
+
+a.img-link {
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	@include mb-border-radius(8px);
+	img {
+		@include transition( all ease-in-out .3s ); /* Animation */
+	}
+	&:hover img, &:focus img {
+		transform: scale(1.03);
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Buttons ////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+.btn,
+input[type="submit"]  {
+	border: none;
+	@include mb-border-radius( 4px );
+	font-size: 1rem;
+	padding: 0.5rem 2rem;
+	text-transform: uppercase;
+	@include transition(all 250ms);
+	@media(min-width: $d_md ) {
+		font-size: 1.125rem;
+	}
+	&.btn-fw {
+		width: 100%;
+	}
+}
+
+.btn-primary {	
+	color: $black;
+	background-color: $jem1;
+	&:hover, &:focus {
+		background-color: $jem1d;
+	}
+}
+
+.btn-secondary,
+input[type="submit"] {
+	color: $white;
+	background-color: $black;
+	&:hover, &:focus {
+		background-color: $dark;
+	}
+}
+
+
+.btn.no-btn {
+	padding: 0.25rem 0.5rem;
+	color: $jem1;
+	text-transform: capitalize;
+	text-decoration: none;
+	&:hover, &:focus {
+		color: $black;
+		text-decoration: underline;
+		text-decoration-color: $jem1;
+		text-decoration-thickness: 3px;
+	}
+}
+
+button:focus {outline:0 !important;}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Images /////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+img { @include mb-border-radius( 8px ); }

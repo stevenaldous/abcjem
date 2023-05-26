@@ -1,0 +1,30 @@
+// All Jem Theme SCSS files goes in this file for selection, ordering, and compilation. Simply comment out if not needed in the project and add files as needed. 
+
+// Theme must run first files ////////////////////////////////////////////////////////////////////////////////
+@import "variables";        // Theme Variables (fonts, colors, breakpoints, etc.)
+@import "mixins";           // MB specific Mixins to make coding easier/faster
+
+// Theme Styleguide /////////////////////////////////////////////////////////////////////////////////////////
+@import "styleguide";       // This should be filled out with the style guide from design for each project
+                            // styleguide contains Hx fonts, links, buttons, etc.
+
+// Theme Files /////////////////////////////////////////////////////////////////////////////////////////////
+@import "utilities";        // Utility classes for template building
+@import "header";           // Header & Menu
+@import "footer";           // Footer
+@import "hero";             // Hero
+@import "blog";             // Blog Styles
+@import "cpt";              // Custom Post Type Page templates
+@import "flex";             // Flex Content 
+@import "pagetemplates";    // page templates
+// @import "modals";           // Modals aka Popups
+@import "sidebar";          // Sidebars
+@import "sliders";          // Sliders
+@import "forms";            // Forms
+@import "offcanvas";        // OffCanvas - Slide Outs
+// @import "animations";       // Animations
+
+// Add more here
+
+
+

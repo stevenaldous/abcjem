@@ -1,0 +1,92 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Sidebars/Off Canvas PopOuts
+///////////////////////////////////////////////////////////////////////////////////
+
+/* Global button reset */ 
+.offcanvas .btn-close {
+    background: transparent;
+    font-size: 2rem;
+    color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    margin: 0;
+    &.btn-close-white {
+        color: $white;
+        filter: none;
+    }
+    &:hover, &:focus {
+        color: $jem1;
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
+// OffCanvas Mobile Menu
+///////////////////////////////////////////////////////////////////////////////////
+.offcanvas-menu {
+    z-index: 1000000;
+}
+///////////////////////////////////////////////////////////////////////////////////
+// OffCanvas Form
+///////////////////////////////////////////////////////////////////////////////////
+.offcanvas-form {
+    .offcanvas-header {
+        .btn-close { font-size: 1.5rem; }
+    }
+    .offcanvas-body {
+        form {
+            .gform_footer {
+                padding-top: 25px;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+            }
+        }
+        .gform_validation_errors,
+        .gform_submission_error,
+        form .validation_message {
+            color: $jem1;
+        }
+    }
+    // Tablet +
+    @media screen and (min-width: $d_md) {
+
+    }
+    // Laptop +
+    @media screen and (min-width: $d_lg) {
+
+    }
+}
+
+
+/* OC from Button */ 
+$cw: 40px;
+.oc-btn-wrap {
+    position: absolute;
+    top: 175vh;
+    .oc-btn {
+        position: fixed;
+        right: -100px;
+        top: 200px;
+        overflow: hidden;
+        @include mb-border-radius( 8px 8px 0 0);
+        @include transform( rotate(-90deg) );
+        transform-origin: bottom right;
+        z-index: 5;
+        &:after {
+            content: '';
+            display: block;
+            position: inherit;
+            height: $cw;
+            width: $cw;
+            background: $black;
+            left: - $cw / 2 ;
+            top: - $cw / 2 ;
+            @include transform( rotate(45deg) );
+        }
+        &.onscreen {
+            right: 0;
+        }
+    }
+
+}

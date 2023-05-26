@@ -1,0 +1,168 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Header
+///////////////////////////////////////////////////////////////////////////////////
+$head_bg: $black;
+$head_font: $white;
+$head_hover: $jem1;
+$drop_bht: 60px; 
+
+// main nav colors
+#main-nav {
+    background-color: $head_bg;
+    // mobile header logo
+    .custom-logo-link img {
+        max-width: 50px;
+    }
+    // hamburger Menu button color
+    .navbar-toggler {
+        color: $head_font;
+        &:hover, &:focus { color: $jem1; }
+    }
+    // nav link and dropdowns
+    .nav-link, 
+    .dropdown-item { text-transform: capitalize; }
+    .dropdown-toggle{
+        position: relative;
+        i                { color: inherit;}
+        &::after         { content: none; }
+        &:hover, &:focus { color: $head_hover; }
+    }
+    // mobile slideout Bckground color
+    .offcanvas { background-color: $head_bg; }
+    // phone cta btn
+    .phone-cta .btn{
+        padding: 0.75rem;
+    }
+
+    // main menu mobile Styles
+    #main-menu {
+        padding: 50px 0px 20px;
+        .dropdown-menu { background-color: transparent; border: none; }
+        margin: 0;
+        .top-toggle { margin-bottom: 0.5rem;}
+        // menu link mobile text styles
+        a {
+            color: $head_font;
+            height: $drop_bht;
+            display: flex;
+            align-items: center;
+            padding-left: 1rem;
+            &.dropdown-toggle {
+                display: flex;
+                width: -webkit-calc(100% - $drop_bht);
+                width:    -moz-calc(100% - $drop_bht);
+                width:         calc(100% - $drop_bht);
+                align-items: center;
+            }
+            // link bg color
+            &:active, &:focus, &:hover  { background-color: $jem1; }
+        }
+        // dropdown toggle button 
+        button.dropdown-toggle {
+            appearance: none;
+            top: 0;
+            right: 0;
+            padding: 0;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // width/height
+            width: $drop_bht;
+            height: $drop_bht;
+            // colors
+            color: $head_font;
+            background-color: darken($jem1, 01%  );
+            border: none;
+            i { @include transition( all 450ms ease ) }
+            &.show {
+                color: $head_font;
+                i { rotate: 180deg;}
+                .dropdown-menu { display: block; }
+            }
+        }
+        // dropdown menu height
+        li .dropdown-menu { 
+            padding: 0;
+            li a { height: $drop_bht - 20; }
+            li button.dropdown-toggle {  height: $drop_bht - 20; }
+        }
+    }
+    // Mobile ONLY (link indentation)
+    @media( max-width: $d_lg - 1 ) {
+        #main-menu {
+            // nested link indentation
+            // 1st level
+            li li .dropdown-item,
+            li li a.dropdown-toggle {
+                padding-left: 38px; 
+            }
+            // second level
+            li li li .dropdown-item,
+            li li li a.dropdown-toggle {
+                padding-left: 48px; 
+            }
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////
+    // laptop +
+    @media( min-width: $d_lg ) {
+        .phone-cta .btn{ 
+            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        #main-menu {
+            a:hover {
+                background-color: transparent;
+                color: $head_hover;
+            }
+            a.dropdown-toggle{
+                display: inline;
+                padding: 0.25rem 0.25rem 0.25rem 1rem;
+                &:hover, &:focus {
+                    color: $head_hover;
+                    background-color: transparent
+                }
+            }
+            li { position: relative; }
+            button.dropdown-toggle {
+                background-color: transparent;
+                position: relative;
+                color: $head_font;
+                display: inline;
+                width: 20px;
+                &:hover, &:focus {
+                    color: $head_hover;
+                }
+            }
+            .dropdown-menu {
+                width: 100%;
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
+                width: fit-content;
+                background-color: $head_bg;
+                box-shadow: 0 3px 10px rgba( $black, 0.16 );
+                @include mb-border-radius( 0 );
+                &.submenu { left: 100%; top: 0; }
+                a:hover {
+                    background-color: $head_hover;
+                    color: $head_font;
+                }
+            }
+            .dropdown-menu a.dropdown-toggle{ width: 100%; display: inline-block;}
+            .dropdown-menu button.dropdown-toggle { 
+                position: absolute;
+                width: 40px;
+                right: 0rem;
+                i { rotate: -90deg;}
+                &:hover, &:focus {
+                    background-color: $head_hover;
+                    color: $head_font;
+                }
+            }
+        }
+    }
+    /// end of laptop +
+    ///////////////////////////////////////////////////////////////////////////////////   
+}

@@ -1,0 +1,131 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Gravity Form Styles
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
+/******** Button styles are set in _styleguide.scss ********/
+
+
+
+
+
+// Grav Form variables. Update these settings to make quick changes
+$gf-padding: 0; // set outer padding on form
+$gf-bg: transparent; // background color of form
+$gf-border-width: 0; // border-width on form
+$gf-border-color: $white; // border color
+
+// Fields / Rows
+$gf-field-margin-bottom: 1rem; // margin between field and label below (vertical spacing between rows)
+
+// Labels
+$gf-label-font-size: 1rem;
+$gf-label-font-color: $black;
+$gf-label-font-weight: 700;
+
+// Inputs
+$gf-input-bg: $white;
+$gf-input-color-border: $white;
+$gf-input-border-width: 1px;
+$gf-input-color-text: $black;
+$gf-input-padding: 0.75rem;
+$gf-input-radius: 4px;
+
+
+
+
+.gform_wrapper {
+    padding: $gf-padding;
+    background-color: $gf-bg;
+    border: solid $gf-border-width $gf-border-color;
+    .gform_fields {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .gfield_lael {
+        font-size: $gf-label-font-size;
+        color: $gf-label-font-color;
+        font-weight: $gf-label-font-weight;
+    }
+    .hidden_label .gfield_label {
+        position: absolute;
+        left: 10000px;
+        height: 1px;
+        width: 1px;
+        opacity: 0;
+    }
+    input[type="text"],
+	input[type="url"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="password"],
+	input[type="file"],
+	textarea{
+        background-color: $gf-input-bg;
+        border: solid $gf-input-border-width $gf-border-color;
+		padding: $gf-input-padding;
+		width: 100%;
+        margin-bottom: $gf-field-margin-bottom;
+        @include mb-border-radius( $gf-input-radius );
+		@media screen and (min-width: $d_md) {
+			width: 100%;
+		}
+	}
+    .ginput_container_name {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        span {
+            width: 100%;
+        }
+
+        @media screen and (min-width: $d_md) {
+            flex-direction: row;
+            span {
+                max-width: 49%;
+            }
+        }
+    }
+
+    .gfield {
+        width: 100%;
+        display: inline-block;
+        &.gfield--width-half {
+            @media screen and (min-width: $d_md) {
+                max-width: 49%;
+            }
+        }
+    }
+
+    .ginput_container_select,
+    .ginput_container_checkbox {
+        margin-bottom: $gf-field-margin-bottom;
+    }
+
+    .ginput_container_select {
+        select {
+            width: 100%;
+            @include mb-border-radius( $gf-input-radius );
+            border: solid $gf-input-border-width $gf-border-color;
+            padding: $gf-input-padding;
+        }
+    }
+
+    .gform_footer {
+        padding-top: $gf-field-margin-bottom;
+    }
+
+    // WCAG approved hidden labels
+    .gfield label {
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+}

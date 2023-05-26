@@ -1,0 +1,48 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Footer
+///////////////////////////////////////////////////////////////////////////////////
+
+footer {
+    .footer-main {
+        background-color: $dark;
+        padding: 3rem 0;
+    }
+    a, a.nav-link {
+        text-decoration: none;
+        color: $white;
+        &:hover, &:focus {
+            color: $jem1;
+        }
+    }
+    p {
+        color: $white;
+        margin-bottom: 0;
+    }
+    .navbar-brand img {
+        max-width: 50px;
+    }
+    .social-wrap { display: flex; }
+    .social li {
+        margin-left: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .foot-menu {
+        .nav-link {
+            padding-left: 0;
+        }
+    }
+    .site-info .si-links {
+        color: $white;
+        span:not(:first-of-type):before {
+            content: '|';
+            margin: 0 0.5rem;
+            color: inherit;
+            font-weight: 300;
+        }
+    }
+
+    .footer-info {
+        background-color: $black;
+    }
+}

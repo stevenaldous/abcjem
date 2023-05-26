@@ -1,0 +1,130 @@
+{
+    "key": "group_62f6c8e92e76a",
+    "title": "Settings: Global JavaScript",
+    "fields": [
+        {
+            "key": "field_62f6cb0ac4316",
+            "label": "Google Analytics",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_62f6cb1cc4317",
+            "label": "GA Script",
+            "name": "js_ga",
+            "type": "textarea",
+            "instructions": "This will place any code written on this section on the page exactly as written. Be careful as this is one area where improper code will be displayed potentially breaking the page. All code must be wrapped and self closing. \r\n<br><br>\r\n&lt;script type=\"text\/javascript\"&gt;\r\n<br>\r\n   \/\/ some JavaScript\r\n<br>\r\n&lt;\/script&gt;",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_62f6c8e930bce",
+            "label": "Header Scripts",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_62f6caf10b493",
+            "label": "Header Script",
+            "name": "js_head",
+            "type": "textarea",
+            "instructions": "This will place any code written on this section on the page exactly as written. Be careful as this is one area where improper code will be displayed potentially breaking the page. All code must be wrapped and self closing. \r\n<br><br>\r\n&lt;script type=\"text\/javascript\"&gt;\r\n<br>\r\n   \/\/ some JavaScript\r\n<br>\r\n&lt;\/script&gt;",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_62f6c8e930bde",
+            "label": "Footer Scripts",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_62f6c931b516a",
+            "label": "Footer Script",
+            "name": "js_foot",
+            "type": "textarea",
+            "instructions": "This will place any code written on this section on the page exactly as written. Be careful as this is one area where improper code will be displayed potentially breaking the page. All code must be wrapped and self closing. \r\n<br><br>\r\n&lt;script type=\"text\/javascript\"&gt;\r\n<br>\r\n   \/\/ some JavaScript\r\n<br>\r\n&lt;\/script&gt;",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1660341994
+}
