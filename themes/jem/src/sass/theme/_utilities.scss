@@ -21,6 +21,8 @@
 .c-dark { color: $dark; }
 .c-black { color: $black; }
 
+
+
 ///////////////////////////////////////////////////////////////////////////////////
 // Backgrounds ////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
@@ -30,6 +32,29 @@
 .bg-jem1 { background: $jem1; }
 .bg-dark { background-color: $dark !important; }
 .bg-black { background: $black; }
+
+
+// pastels
+.bg_pastel_y { background-color: $pastel_y; }
+.bg_pastel_b { background-color: $pastel_b; }
+.bg_pastel_p { background-color: $pastel_p; }
+
+// yellows
+.bg_yellow_l { background-color: $yellow_l; }
+.bg_yellow   { background-color: $yellow; }
+.bg_yellow_d { background-color: $yellow_d; }
+
+// blues
+.bg_blue_l { background-color: $blue_l; }
+.bg_blue   { background-color: $blue; }
+.bg_blue_d { background-color: $blue_d; }
+
+// pinks
+.bg_pink_l { background-color: $pink_l; }
+.bg_pink   { background-color: $pink; }
+.bg_pink_d { background-color: $pink_d; }
+
+
 
 .bg-trans { background: transparent; }
 .bg-img {
@@ -165,7 +190,10 @@ iframe {
  }
 
 // support a larger font size for text content
-.font-lg p, a, ul { font-size: 1.2rem; } 
+.font-lg {
+	p, a, ul, ol { font-size: 1.2rem; } 
+} 
+
 
 
 

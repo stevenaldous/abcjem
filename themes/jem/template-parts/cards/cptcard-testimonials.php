@@ -9,7 +9,9 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-    $exc = get_field('excerpt')
+    $exc = get_field('excerpt');
+
+    
 
 ?>
 <div class="testimonial-card">
@@ -18,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
             <?php if($exc): ?>
                 <p class="exc h4">"<?php echo $exc; ?>"</p>
             <?php endif; ?>
-            <a href="<?php the_permalink(); ?>" class="name ms-3"><?php echo the_title(); ?></a>
+            <p class="name ms-3">- <?php echo the_title(); ?></p>
         </div>
     </div>
 </div>

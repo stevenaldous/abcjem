@@ -6,7 +6,6 @@ defined( 'ABSPATH' ) || exit;
 //layout/options vars
 $align  = ' justify-content-' . get_sub_field('align');
 $pb     = get_sub_field('b_pad') ? ' pb-'.get_sub_field('b_pad') : '';
-$st     = get_sub_field('style') ? ' flair' : '';
 $class  = get_sub_field('class') ? ' ' . get_sub_field('class') : '';
 
 // content Vars
@@ -26,7 +25,8 @@ $btn_ct = ' btns-'. count( get_sub_field($rep) );
             while(  have_rows( $rep ) ){
                 the_row();
                 // get button
-                $l = get_sub_field('link');
+                $l  = get_sub_field('link');
+                $st = get_sub_field('type') ?: 'btn-primary';
 
                 if($l) {
                     // get btn array vars
@@ -35,7 +35,7 @@ $btn_ct = ' btns-'. count( get_sub_field($rep) );
                     $lx = $l['target'] ? $l['target'] : '_self';
 
                     // print btn
-                    echo '<a href="'.$lu.'" class="btn btn-primary '. $wc .'" target="'.$lx.'" '.$mw.'>'.$lt.'</a>';
+                    echo '<a href="'.$lu.'" class="btn '. $st . ' '. $wc .'" target="'.$lx.'" '.$mw.'>'.$lt.'</a>';
                 }
             }
         }

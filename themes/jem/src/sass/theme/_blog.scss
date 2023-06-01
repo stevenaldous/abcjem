@@ -30,7 +30,7 @@
     footer {
         .post-navigation a {
             color: $jem1;
-            @include f2_bold();
+            @include f2_reg();
             text-transform: uppercase;
             &:hover, &:focus {
                 color: $jem2;

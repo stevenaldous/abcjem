@@ -47,52 +47,57 @@ flex-shrink: 0;
 ///////////////////////////////////////////////////////////////////////////////////
 // Basic Text Styles //////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
+p, ol, ul { 
+	font-size: 1.063rem;
+	line-height: 1.8;
+	text-underline-offset: 0.15rem;
+	@media #{ $mq_md } { font-size: 1.125rem; line-height: 1.72; }
+	@media #{ $mq_lg } { font-size: 1.250rem; line-height: 2; }
+}
 .text-wrap p:last-of-type ,
 .txt-wrap p:last-of-type { margin-bottom: 0; }
 ///////////////////////////////////////////////////////////////////////////////////
 // Heading Styles /////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-
+	color: $dark;
+}
+// font family
+ h1,  h2, 
+.h1, .h2 { 
+	@include f2_reg(); 
+	line-height: 1.4;
 }
 
+ h3,  h4,  h5,  h6,
+.h3, .h4, .h5, .h6 { 
+	@include f1_bold();
+	text-transform: uppercase;
+	letter-spacing: 0.150rem;
+}
+
+// font sizes
 h1, .h1 {
-
-	@media(min-width: $d_md ) {
-
-	}
-	@media(min-width: $d_lg ) {
-
-	}
+	font-size: 2.5rem;
+	@media #{ $mq_md } { font-size: 1.938rem; }	
+	@media #{ $mq_lg } { font-size: 3.125rem; }
 }
 h2, .h2 {
-
-	@media(min-width: $d_md ) {
-
-	}
-	@media(min-width: $d_lg ) {
-
-	}
+	font-size: 1.875rem;
+	@media #{ $mq_md } { font-size: 1.688rem; }	
+	@media #{ $mq_lg } { font-size: 2.5rem; }
 }
 h3, .h3 {
-
-	@media(min-width: $d_md ) {
-
-	}
-	@media(min-width: $d_lg ) {
-
-	}
+	color: $blue_d;
+	font-size: 1.25rem;
+	@media #{ $mq_md } { font-size: 1.375rem; }	
+	@media #{ $mq_lg } { font-size: 1.5rem; }
 }
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-
-	@media(min-width: $d_md ) {
-
-	}
-	@media(min-width: $d_lg ) {
-
-	}
+ h4,  h5,  h6,
+.h4, .h5, .h6 {
+	font-size: 1.125rem;
+	@media #{ $mq_md } { font-size: 1.375rem; }	
+	@media #{ $mq_lg } { font-size: 1.5rem; }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -102,6 +107,33 @@ ul {
 	display: inline-block;
 	text-align: left;
 }
+
+main ul {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 1.5rem;
+	li{
+		position: relative;
+		margin-bottom: 0.5rem;
+		&::before {
+			// icon
+			font-family: 'Font Awesome 6 Pro Solid';
+			content: '\f0da';
+			color: $pink;
+			// render rules 
+			display: inline-block;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			// positioning 
+			left: -2.4rem;
+			position: absolute;
+			text-align: center;
+			width: var(--fa-li-width,2em);
+			line-height: inherit;
+		}
+	}
+}
+
 ul.inline {
 	list-style: none;
 	padding: 0;
@@ -118,16 +150,31 @@ ul.bold {
 		font-weight: 600;
 	}
 }
+
+// ordered list
+ol {
+	padding-left: 1.5rem;
+	li {
+		margin-bottom: 0.5rem;
+		&::marker {
+			color: $pink;
+			font-weight: 600;
+		}
+	}
+}
+
 li p:last-of-type { margin-bottom: 0; }
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Links //////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 a {
-    color: $jem1;
+    color: $dark;
+	font-weight: 700;
+	text-decoration-thickness: 1px;
 	@include transition(all 250ms);
 	&:hover, &:focus {
-
+		color: $jem1;
 	}
 }
 
@@ -151,47 +198,57 @@ a.img-link {
 .btn,
 input[type="submit"]  {
 	border: none;
-	@include mb-border-radius( 4px );
+	@include mb-border-radius( 0 );
+	@include f1_bold();
+	letter-spacing: .05rem;
 	font-size: 1rem;
 	padding: 0.5rem 2rem;
 	text-transform: uppercase;
 	@include transition(all 250ms);
-	@media(min-width: $d_md ) {
-		font-size: 1.125rem;
-	}
+	@media #{ $mq_lg } { font-size: 1.250rem; }
 	&.btn-fw {
 		width: 100%;
 	}
 }
 
 .btn-primary {	
-	color: $black;
+	color: $white;
 	background-color: $jem1;
 	&:hover, &:focus {
-		background-color: $jem1d;
+		background-color: $dark;
 	}
 }
 
 .btn-secondary,
 input[type="submit"] {
 	color: $white;
-	background-color: $black;
+	background-color: $pink;
 	&:hover, &:focus {
+		background-color: $dark;
+	}
+}
+
+.btn-outline {	
+	color: $dark;
+	border: solid 1px $dark;
+	background-color: $white;
+	&:hover, &:focus {
+		color: $white;
 		background-color: $dark;
 	}
 }
 
 
 .btn.no-btn {
-	padding: 0.25rem 0.5rem;
-	color: $jem1;
+	padding: 0.5rem 1rem 0 0;
+	color: $dark;
 	text-transform: capitalize;
-	text-decoration: none;
+	text-decoration: underline;
+	text-underline-offset: 0.15rem;
+	text-decoration-thickness: 2px;
 	&:hover, &:focus {
-		color: $black;
-		text-decoration: underline;
-		text-decoration-color: $jem1;
-		text-decoration-thickness: 3px;
+		color: $jem1;
+		// text-decoration-color: $pink;
 	}
 }
 

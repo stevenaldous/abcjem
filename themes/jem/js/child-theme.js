@@ -9538,7 +9538,8 @@
 	  //  Alert-Nav Cookie
 	  //////////////////////////////////////
 	  // on window load check for the nav alert cookie right away
-	  window.onload = checkCookie; // custom SetCookie function to manage cookie
+	  //  window.onload = checkCookie;
+	  // custom SetCookie function to manage cookie
 	  //  function setCookie(name, value, daysToLive) {
 	  //      // Encode value in order to escape semicolons, commas, and whitespace
 	  //      var cookie = name + "=" + encodeURIComponent(value);
@@ -9603,7 +9604,6 @@
 	  //////////////////////////////////////
 	  //  Modernizr ObjectFit Implementation
 	  //////////////////////////////////////
-
 	  if (!Modernizr.objectfit) {
 	    $('.obj.img-wrap').each(function () {
 	      var imgUrl = $(this).find('img').prop('src');

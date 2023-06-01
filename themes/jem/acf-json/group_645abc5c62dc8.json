@@ -615,7 +615,7 @@
                                                         "L",
                                                         "XL"
                                                     ],
-                                                    "default_value": 2,
+                                                    "default_value": 3,
                                                     "return_format": "value",
                                                     "multiple": 0,
                                                     "allow_null": 0,
@@ -701,11 +701,40 @@
                                                             "required": 0,
                                                             "conditional_logic": 0,
                                                             "wrapper": {
-                                                                "width": "",
+                                                                "width": "50",
                                                                 "class": "",
                                                                 "id": ""
                                                             },
                                                             "return_format": "array",
+                                                            "parent_repeater": "field_645abc2fca53c"
+                                                        },
+                                                        {
+                                                            "key": "field_64779f921616d",
+                                                            "label": "Button Style",
+                                                            "name": "type",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "50",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "btn-primary": "Blue Button",
+                                                                "btn-secondary": "Pink Button",
+                                                                "btn-outline": "Outline Button",
+                                                                "no-btn": "Text Only"
+                                                            },
+                                                            "default_value": false,
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
                                                             "parent_repeater": "field_645abc2fca53c"
                                                         }
                                                     ]
@@ -2133,15 +2162,10 @@
                                                         "id": ""
                                                     },
                                                     "choices": {
-                                                        "bg-trans": "Transparent",
                                                         "bg-white": "White",
-                                                        "bg-light": "Light",
-                                                        "bg-ltgray": "Light Gray",
-                                                        "bg-jem1": "Theme Color",
-                                                        "": "",
-                                                        "bg-dark": "Dark"
+                                                        "bg_pastel_p": "Pink\/Featured"
                                                     },
-                                                    "default_value": "bg-light",
+                                                    "default_value": "bg-pink",
                                                     "return_format": "value",
                                                     "multiple": 0,
                                                     "allow_null": 0,
@@ -8108,5 +8132,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684436095
+    "modified": 1685568126
 }

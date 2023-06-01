@@ -29,8 +29,18 @@ $mq-xxl: "(min-width: #{$d_xxl})";
 ///////////////////////////////////////////////
 // Fonts //////////////////////////////////////
 ///////////////////////////////////////////////
-$f1: 'Roboto', sans-serif;
-$f2: 'Roboto', sans-serif;
+// Load Self-hosted Font
+@font-face {
+	font-family: 'Juana';
+	src: url('../fonts/juana/JuanaSemiBold.woff2') format('woff2'),
+		 url('../fonts/juana/JuanaSemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+$f1: 'Plus Jakarta Sans', sans-serif;
+$f2: 'Juana', serif;
 
 @mixin f1_light() {
 	font-family: $f1;
@@ -48,17 +58,10 @@ $f2: 'Roboto', sans-serif;
 	font-family: $f1;
 	font-weight: 700;
 }
-@mixin f2_light() {
-	font-family: $f2;
-	font-weight: 300;
-}
+
 @mixin f2_reg() {
 	font-family: $f2;
-	font-weight: 400;
-}
-@mixin f2_bold() {
-	font-family: $f2;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 
@@ -73,12 +76,35 @@ $ltgrey: $ltgray;  /* just in case I forgot how I spell Graey */
 $gray: #707070;
 $grey : $gray;     /* just in case I forgot how I spell Graey */
 $dark: #0F334E;
-$black: #010203;
+$black: #1F1F1F;
+
+// pastels
+$pastel_y: #FFF7EB; 
+$pastel_b: #EBF8FE; 
+$pastel_p: #FCEFF5; 
+
+// yellows
+$yellow_l: #F6DEA4;
+$yellow:   #FFC200;
+$yellow_d: #F4B400;
+
+// blues
+$blue_l: #AEDDF1;
+$blue:   #259DDD;
+$blue2:  #38A6E0;
+$blue_d: #338AB8;
+
+// pinks
+$pink_l: #F1C1DA;
+$pink:   #E869A4;
+$pink_d: #D2669A;
+
+
 
 // main accent vars
-$jem1: #338AB8;
+$jem1: $blue;
 $jem1d: darken( $jem1, 20%);
-$jem2: $jem1;
+$jem2: $pink;
 
 // set Bootstrap primary color
 $primary: $jem1;

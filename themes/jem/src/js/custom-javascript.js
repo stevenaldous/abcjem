@@ -12,7 +12,7 @@
  //  Alert-Nav Cookie
  //////////////////////////////////////
  // on window load check for the nav alert cookie right away
- window.onload = checkCookie;
+//  window.onload = checkCookie;
  
  // custom SetCookie function to manage cookie
 //  function setCookie(name, value, daysToLive) {

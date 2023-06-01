@@ -30,7 +30,7 @@ $img    = get_field( 'img' );
     <div class="<?php echo esc_attr( $container ); ?>">
         <div class="row">
             <div class="col-12 mt-5 pt-5">
-                <header class="p-4">
+                <header class="py-4">
                     <?php
                         // print title w/options
                         echo '<' . $sh . ' class="' . $vh . '">' . $t . '</' . $sh . '>'; 

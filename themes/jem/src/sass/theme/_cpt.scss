@@ -43,6 +43,9 @@
     }
 }
 
-.cases-card {
-
+// testimonial cards
+.test-wrap {
+    &.bg-white {
+        border: solid 1px $black;
+    }
 }
